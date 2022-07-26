@@ -4,6 +4,7 @@ div.lista{
     padding: 10px;
 }
 
-div + p{
+/* > + ~  */
+p[unico]{
     color: red;
 }
