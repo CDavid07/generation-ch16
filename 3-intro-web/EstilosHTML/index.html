@@ -6,27 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/styles.css">
-    <style type="text/css" media="all">
-        body{
-            background-color: antiquewhite;
+    <link rel="stylesheet" href="assets/css/selector.css">
+      <!-- PRIORIDAD CERO -->
+      <style type="text/css" media="all">
+        * {
+            /* * es un selector universal para "dar formato a todo el cuerpo"*/
+            font-size: 1rem;
+            /* aquí solo se ajusta el tamaño del texto */
         }
-        h2{
-            color: maroon;
-            margin-left: 40px;
-        }
-        p.aviso{
+
+        p.aviso {
             color: blueviolet;
         }
-        div.nuevo{
-            color: #ffa;
+
+        div.nuevo {
+            color: pink;
+        }
+    </style>
+
+    <style>
+        *.univ {
+            color: #00af5da9
+        }
+    </style>
+
+    <style>
+        .univ1 {
+            color: red;
+        }
+    </style>
+
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    
+    <!-- SELECTOR ID, E#e, ALMOHADILLA -->
+    <style>
+        p#alm1 {
+            color: aquamarine;
+        }
+    </style>
+
+    <style>
+        #alm2 {
+            color: deeppink;
+        }
+    </style>
+
+    <style>
+        *#alm3 {
+            color: dodgerblue;
         }
     </style>
 </head>
 <body>
-    <h1 style="color: red;">hola</h1>
-    <h2>hola</h2>
-    <p class="aviso">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe at sapiente qui? Labore odio cumque atque repellendus magni perferendis delectus. Temporibus consectetur error quod odit illo numquam. Nam, ipsum quis?</p>
+    <!-- <h1 style = "color: #36C;"> Esto es una prueba</h1> -->
+    
+    <h1> Esto es una prueba</h1>
 
-    <div class="nuevo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, illum.</div>
+    <p id="alm3">
+        Esto es una alm1
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolorem placeat corrupti doloribus eos quis? Ut quae blanditiis, dicta quidem ipsam aliquid deleniti officiis itaque doloremque sequi quis corrupti ab. Possimus?
+    </p>
+
+    <div class="univ1">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus culpa earum quasi ex soluta, delectus vel
+        laboriosam rerum nam obcaecati, nihil, voluptate sed reprehenderit autem voluptatibus veniam incidunt? Eos,
+        fuga?
+    </div>
+
+    <p class="univ">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </p>
+
+    <!-- PRIMER SELECTOR DE CLASE -->
+    <div class="nuevo">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. <br>
+        Necessitatibus et consequatur, non tenetur nulla, dignissimos at libero ipsum <br>
+        unde repellat doloribus officia repellendus fugiat tempora sapiente aperiam ullam veritatis.
+    </div>
+
+    <p class="aviso">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </p>
+
+    <p>Esto es parrafo 1</p>
+    <div class="lista">
+        <ul>
+            <li>
+                esto es una lista
+                <p>Esto es otro parrafo interno</p>
+            </li>
+        </ul>
+        <p>Esto es otro parrafo3</p>
+    </div>
+   
 </body>
 </html>

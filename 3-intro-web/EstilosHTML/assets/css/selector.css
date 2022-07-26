@@ -1,0 +1,9 @@
+div.lista{
+    border: red 3px solid;
+    margin: 10px;
+    padding: 10px;
+}
+
+div + p{
+    color: red;
+}
