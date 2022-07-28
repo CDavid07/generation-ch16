@@ -1,3 +1,10 @@
+.padre{
+    display: flex;
+    flex-direction: column;
+     /* Nos permite alinear en vertical */
+
+    justify-content: center;
+}
 .cuadro{
     background-color: aqua;
     height: 100px;
@@ -11,39 +18,45 @@
 /*     display: inline-block;
  */    border: 10px solid lightblue;
     border-radius: 10px 20px 30px 40px;
-
+    /* display: block; */
 }
 
 .el-1{
     background-color: blue;
-    position: static;
+    /* display: block; */
+    align-self: flex-start;
+
+    flex-grow: 20;
 }
 
 .el-2{
     background-color: red;
-    position: absolute;
-    top: 0px;
-    right: 0px;
+    
 }
 
 .el-3{
     background-color: pink;
-    position: static;
-    position: relative;
-    top: 200px;
-    right: 200px;
 }
 
 .el-4{
     background-color: green;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
+    
 }
-
 .el-5{
     background-color: yellow;
-    position: sticky;
-    top: 0;
+   
 }
 
+/* Introduccion a bootstrap */
+.contenedor{
+    height: 200px;
+    background-color: #80cccc;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.fila{
+    display: flex;
+}
+.columna{
+    flex-grow: 1    ;
+}
