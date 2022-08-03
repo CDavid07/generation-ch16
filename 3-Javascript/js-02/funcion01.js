@@ -30,6 +30,11 @@ function miSuma(a, b) {
   }
   nombreCompleto("David Arturo","Castellanos","Guzman");
   
+  //Funcion para imprimir edad
+  function edad(edad){
+    console.log("Tu edad es: " , edad);
+  }
+  edad(23);
   // Funcion división
   function division(divisor, dividendo){
     console.log("Resultado:", (dividendo / divisor));
