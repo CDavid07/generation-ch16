@@ -28,7 +28,7 @@ function miSuma(a, b) {
   function nombreCompleto(nombres, apellido1, apellido2){
     console.log("Tu nombre completo es: " , nombres, apellido1, apellido2);
   }
-  nombreCompleto("Héctor Osiel","González","Hernández");
+  nombreCompleto("David Arturo","Castellanos","Guzman");
   
   // Funcion división
   function division(divisor, dividendo){
