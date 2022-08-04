@@ -13,6 +13,7 @@ while(dineroBanco>=0){
         versueldo()
     }else{
         let retiro = parseInt(prompt("Cuanto desea retirar?"));
+        
         dineroBanco = dineroBanco - retiro;
     }
 }
