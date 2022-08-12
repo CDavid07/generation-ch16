@@ -1,4 +1,4 @@
-const urlPokemon = "https://pokeapi.co/api/v2/pokemon/pikachu"
+const urlPokemon = "https://pokeapi.co/api/v2/pokemon/"
 
 const TYPE_COLORS = {
     bug: 'B1C12E',
@@ -26,7 +26,6 @@ const imgPokemon = document.getElementById("img-pokemon");
 /* console.log(imgPokemon);
  */
 
-console.log(1+3+"7");
 const idPokemon = document.getElementById("id-pokemon");
 /* console.log(idPokemon);
  */
@@ -34,14 +33,33 @@ const nombrePokemon = document.getElementById("nombre-pokemon");
 /* console.log(nombrePokemon);
  */
 
+const listaHabilidades= document.getElementById('habilidades');
+
+const listaTipo= document.getElementById('tipo');
+
+const formulario= document.getElementById('buscador-pokemon');
+
 /* Funciones*/
-function buscarPokemon(){
-    let buscarPokemon = document.getElementById("buscador").value;
+ formulario.addEventListener("submit", (e)=>{
+    e.preventDefault(); //Detiene la accion del submit de carga
+    console.log("boton press");
+
+    const inputPokemon = document.getElementById("busqueda-pokemon");
+    console.log(inputPokemon.value);
+
+    const nuevaBusqueda = urlPokemon + inputPokemon.value 
+    console.log(nuevaBusqueda);
+
+    obtnerPokemon(nuevaBusqueda);
+}) 
+
+/* function buscarPokemon(){
+    let buscarPokemon = document.getElementById("busqueda-pokemon").value;
     console.log(buscarPokemon);
 
     let urlPokemonB = `https://pokeapi.co/api/v2/pokemon/${buscarPokemon}`
     obtnerPokemon(urlPokemonB);
-}
+} */
 
 async function obtnerPokemon(url){
     try {
@@ -68,23 +86,30 @@ async function obtnerPokemon(url){
         idPokemon.textContent =  `ID: ${pokemon.id}`
         nombrePokemon.textContent = pokemon.nombre
 
-        const listaHabilidades= document.getElementById('habilidades');
+        //Habilidades
         listaHabilidades.innerHTML="";
+        for (let i = 0; i < pokemon.habilidad.length; i++) {
+            const nombreHabilidad = pokemon.habilidad[i].ability.name;
+            listaHabilidades.innerHTML += `<li class="list-group-item" >${nombreHabilidad}</li>`;
+        }
+      /*   
          pokemon.habilidad.forEach((element) => {
             listaHabilidades.innerHTML += `<li class="list-group-item" >${element.ability.name}</li>`;
-        });
+        }); */
 
-        const listaTipo= document.getElementById('tipo');
+        //tipo
         listaTipo.innerHTML = "";
         pokemon.tipo.forEach((element) => {
            
+            const nombreTipo = element.type.name;
             //console.log(TYPE_COLORS[element.type.name]);
-            listaTipo.innerHTML += `<li class="list-group-item text-white" style= "background-color: #${TYPE_COLORS[element.type.name]};" >${element.type.name}</li>`;
+            listaTipo.innerHTML += `<li class="list-group-item text-white" style= "background-color: #${TYPE_COLORS[element.type.name]};" >${nombreTipo}</li>`;
         });
   
     } catch (error) {
         console.log(error);
+        alert("Error: pokemon no valido")
     }
 }
 
-obtnerPokemon(urlPokemon);
+//obtnerPokemon(urlPokemon);
