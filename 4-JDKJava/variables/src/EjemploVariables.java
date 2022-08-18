@@ -45,8 +45,8 @@ public class EjemploVariables {
         System.out.println("boolean valor maximo: " + Boolean.MAX_VALUE);
         System.out.println("boolean valor minimo: " + Boolean.MIN_VALUE); */
 
-       var miVar = '2',
-        System.out.println("miVar = " + miVar);
+       /*var miVar = '2',
+        System.out.println("miVar = " + miVar);*/
 
     }
 }
