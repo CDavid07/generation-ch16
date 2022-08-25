@@ -1,3 +1,5 @@
+package MiEjemploJava;
+
 public class Saludo {
 
     //Atributos
