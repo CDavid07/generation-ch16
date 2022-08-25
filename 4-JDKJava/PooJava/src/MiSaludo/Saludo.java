@@ -1,4 +1,4 @@
-package MiEjemploJava;
+package MiSaludo;
 
 public class Saludo {
 
@@ -6,10 +6,12 @@ public class Saludo {
     String textoS = "Hola mundo Java oop";
     int a = 2;
     //Metodos
-    void saludar (){
+    public void saludar (){
+
         System.out.println("Hola Java OOP");
     }
-    String saludar0(){
+    public String saludar0(){
+
         return textoS;
     }
 
