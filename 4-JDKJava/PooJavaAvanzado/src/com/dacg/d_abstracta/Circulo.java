@@ -10,11 +10,8 @@ public class Circulo extends FigurasGeometricas{
 
 
 
-    public Circulo(){
-
-    }
-
     public Circulo(float radio) {
+        super("Circulo");
         this.radio = radio;
     }
 
