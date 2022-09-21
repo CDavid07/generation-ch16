@@ -57,7 +57,7 @@ function borrar(elemento) {
 
         document.getElementById("tabla").deleteRow(fila.rowIndex);
 
-        fetch('http://localhost:8080/usuario/eliminar/' + elemento.id, {
+        fetch('http://localhost:8080/usuario/' + elemento.id, {
             method: 'DELETE'
         })
             .then(res => res)

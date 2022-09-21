@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-
+import com.generation.dacg.models.PostsModel;
 import com.generation.dacg.models.UsuarioModel;
 import com.generation.dacg.services.UsuarioService;
 
@@ -48,4 +48,5 @@ public class UsuarioController {
             return "No pudo eliminar el usuario con id" + id;
         }
     }
+	
 }
